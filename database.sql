@@ -11,3 +11,10 @@ CREATE TABLE students (
     email VARCHAR(100),
 
 );
+
+CREATE TABLE users (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    salt VARCHAR(64) NOT NULL,
+    password_hash VARCHAR(200) NOT NULL 
+)
